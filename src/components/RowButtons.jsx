@@ -1,17 +1,17 @@
 import React from 'react'
 
-export default function RowButtons({isEditing}) {
+export default function RowButtons({isEditing, editClick, saveClick, clickDelete}) {
 // cb is destructuring props
 
 //Ternary isEditing = condition(if) ?= true result := false result 
     return isEditing ? (
         <td>
-            <button>Save</button>
+            <button onClick={saveClick}>Save</button>
         </td>
     ) : (
         <td>
-            <button>Delete</button>
-            <button>Edit</button>
+            <button onClick={clickDelete}>Delete</button>
+            <button onClick={editClick}>Edit</button>
         </td>
     )
 }
